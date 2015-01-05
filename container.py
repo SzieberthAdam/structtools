@@ -123,7 +123,7 @@ class FixedSizeStructBasedContainer(Container):
     if fmt_first not in self._valid_fmt_first:
       errargs = 'fmt_first', fmt_first, self._valid_fmt_first
     self._fmt_first = fmt_first
-    self._subsize = structsup.calcsizes(self.fmt)
+    self._subsize = structsup.sizes(self.fmt)
     self._datasize = sum(self._subsize)
 
   @property
